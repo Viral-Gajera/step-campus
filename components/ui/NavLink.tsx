@@ -1,3 +1,5 @@
+"use client";
+import { usePathname } from "next/navigation";
 import { Button } from "./button";
 import Link from "next/link";
 
@@ -10,11 +12,18 @@ export default function NavLink({
     href: string;
     className?: string;
 }) {
+    // access path to highlight active link
+    const path = usePathname();
+    const isActive = path == href;
+
+    console.log(isActive);
+
     return (
         <Button
             variant="ghost"
-            // hover:bg-white hover:text-primary-600
-            className={`cursor-pointer ${className} `}
+            className={`bg-neutral-900 text-white hover:bg-[var(--color-primary-400)] hover:text-black cursor-pointer ${className} ${
+                isActive ? " bg-[var(--color-primary-400)] text-black " : ""
+            } `}
         >
             <Link href={href}>{children}</Link>
         </Button>

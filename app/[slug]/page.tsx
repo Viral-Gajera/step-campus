@@ -1,6 +1,7 @@
 import BackButton from "@/components/BackButton";
 import componentList from "@/lib/utils/compList";
 import CodeDisplay from "@/components/CodeDisplay";
+import Image from "next/image";
 
 export default async function Page({
     params,
@@ -12,40 +13,56 @@ export default async function Page({
         return item.url === slug;
     });
 
-    console.log(component.code);
-
     return (
         <section className="custom-border border-b">
             <div className="container mx-auto border-l custom-border border-r p-16">
                 <div className="text-3xl font-bold font-mono flex justify-between items-center mb-8">
-                    <div>{component.title}!,</div>
+                    <h1>{component?.title}!,</h1>
                     <div className="flex item-center">
                         <BackButton />
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h1 className="text-xl font-bold mb-1">Definition:</h1>
-                    <div>{component.description}</div>
+                    <h2 className=" font-bold mb-1">Definition:</h2>
+                    <div>{component?.description}</div>
                 </div>
                 <div className="mb-8">
-                    <h1 className="text-xl font-bold mb-1">Sample:</h1>
-                    <div className="grid grid-cols-2 custom-border border bg-gray-100">
+                    <h2 className=" font-bold mb-2">
+                        {component?.title} Example:
+                    </h2>
+                    {/*  custom-border border grid grid-cols-2 */}
+                    <div className="custom-border border  rounded-lg">
                         <div className="p-6">
                             <component.component />
                         </div>
-                        <div className="bg-black flex flex-cols items-center">
+                        {/* <div className="bg-black flex flex-cols items-center">
                             <CodeDisplay
                                 code={component.code || ""}
                                 language="javascript"
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h1 className="text-xl font-bold mb-1">Youtube:</h1>
+                    <h2 className=" font-bold mb-1">
+                        <Image
+                            src="/youtube-logo.svg"
+                            alt="Youtube logo"
+                            width={30}
+                            height={30}
+                            className="inline-block pb-1"
+                        ></Image>{" "}
+                        Youtube:
+                    </h2>
                     <div>
-                        Have trouble in understanding? <u>Here</u> is youtube
-                        video to help you
+                        Have trouble in understanding?
+                        <a
+                            href="https://youbute.com"
+                            target="_blank"
+                            className="hover:font-semibold p-2 cursor-pointer underline"
+                        >
+                            Here is youtube video to help you
+                        </a>
                     </div>
                 </div>
             </div>

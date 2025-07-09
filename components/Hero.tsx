@@ -18,8 +18,8 @@ export default function () {
 
     return (
         <section className="custom-border border-b">
-            <div className="container mx-auto border-l custom-border border-r p-16 py-44 hero-bg bg-right bg-no-repeat bg-contain">
-                <div className="text-5xl font-bold font-mono">
+            <div className="container mx-auto border-l custom-border border-r p-16 py-44 hero-bg bg-right bg-no-repeat bg-contain flex flex-col">
+                <div className="text-5xl font-bold font-mono !text-black">
                     Hello!,
                     <Image
                         src="/waving-hand.gif"
@@ -29,9 +29,11 @@ export default function () {
                         className="inline-block pb-4"
                     ></Image>
                 </div>
-                <div className="text-3xl font-bold font-mono text-[var(--color-primary-600)] mt-3">
-                    {headingText}
-                    <span className="animate-pulse">|</span>
+                <div className="mt-3 text-gray-700 text-3xl font-bold font-mono">
+                    Welcome To{" "}
+                    <h1 className="text-black inline-block italic underline bg-[var(--color-primary-400)] p-4 skew-x-12 z-0">
+                        Step Campus!!
+                    </h1>
                 </div>
             </div>
         </section>

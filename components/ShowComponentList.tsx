@@ -5,20 +5,21 @@ export default function () {
     return (
         <div className="border-b custom-border">
             <div className="container mx-auto custom-border border-l border-r p-16">
-                <div className="text-3xl font-bold font-mono text-black my-5">
-                    Selenium Components
-                </div>
+                <h1 className="my-5">Selenium Components!,</h1>
                 {/* custom-border border border-r-0 border-b-0 */}
-                <div className="grid grid-cols-5 custom-border border border-r-0 border-b-0">
+                <div className="grid grid-cols-5 px-3">
                     {componentList.map((data: any, index: number) => {
                         return (
                             <div
                                 key={index}
-                                // custom-border border-r border-b
-                                className="p-3 text-center custom-border border-r border-b"
+                                // bg-[var(--color-primary-400)] custom-border border-r border-b bg-[var(--color-primary-100)]
+                                className="p-3 text-center"
                             >
                                 <div>
-                                    <NavLink href={data.url || ""}>
+                                    <NavLink
+                                        href={data.url || ""}
+                                        className="w-full"
+                                    >
                                         {data.title}
                                     </NavLink>
                                 </div>
