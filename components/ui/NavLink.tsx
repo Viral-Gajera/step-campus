@@ -16,8 +16,6 @@ export default function NavLink({
     const path = usePathname();
     const isActive = path == href;
 
-    console.log(isActive);
-
     return (
         <Button
             variant="ghost"

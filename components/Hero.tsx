@@ -18,7 +18,7 @@ export default function () {
 
     return (
         <section className="custom-border border-b">
-            <div className="container mx-auto border-l custom-border border-r p-16 py-44 hero-bg bg-right bg-no-repeat bg-contain flex flex-col">
+            <div className="container mx-auto border-l custom-border border-r p-16 hero-bg bg-right bg-no-repeat bg-contain flex flex-col h-[calc(100vh-82px-82px)] justify-center">
                 <div className="text-5xl font-bold font-mono !text-black">
                     Hello!,
                     <Image
@@ -27,6 +27,7 @@ export default function () {
                         width={70}
                         height={70}
                         className="inline-block pb-4"
+                        unoptimized={true}
                     ></Image>
                 </div>
                 <div className="mt-3 text-gray-700 text-3xl font-bold font-mono">
@@ -35,6 +36,7 @@ export default function () {
                         Step Campus!!
                     </h1>
                 </div>
+                <div className="h-[50px]" ></div>
             </div>
         </section>
     );
