@@ -3,6 +3,13 @@ import componentList from "@/lib/utils/compList";
 import CodeDisplay from "@/components/CodeDisplay";
 import Image from "next/image";
 
+// Define generateStaticParams to provide all possible slug values
+export async function generateStaticParams() {
+    return componentList.map((component: any) => ({
+      slug: component.url, // Assuming component.url is the slug value
+    }));
+  }
+
 export default async function Page({
     params,
 }: {

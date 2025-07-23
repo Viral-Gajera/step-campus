@@ -1,7 +1,8 @@
 "use client";
 
 export function NestedFrame() {
-    let origin = window.location.origin;
+    // Use a fallback for origin during prerendering
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
     return (
         <iframe
             src={origin + "/frame"}

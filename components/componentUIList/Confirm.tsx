@@ -9,7 +9,6 @@ export function Confirm() {
     function handlerClick() {
         setTouched(true);
         let res = confirm("Welcome to Step Campus!!..");
-        console.log(res);
         setResponse(res);
     }
     return (
