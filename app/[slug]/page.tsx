@@ -6,9 +6,9 @@ import Image from "next/image";
 // Define generateStaticParams to provide all possible slug values
 export async function generateStaticParams() {
     return componentList.map((component: any) => ({
-      slug: component.url, // Assuming component.url is the slug value
+        slug: component.url, // Assuming component.url is the slug value
     }));
-  }
+}
 
 export default async function Page({
     params,
@@ -62,13 +62,14 @@ export default async function Page({
                         Youtube:
                     </h2>
                     <div>
-                        Have trouble in understanding?
+                        <span className="font-bold" >Stuck?</span>
                         <a
                             href="https://youbute.com"
                             target="_blank"
-                            className="hover:font-semibold p-2 cursor-pointer underline"
+                            className="hover:font-bold p-2 cursor-pointer underline underline-offset-2 italic"
                         >
-                            Here is youtube video to help you
+                            Watch the Step-by-Step
+                            Tutorial on YouTube
                         </a>
                     </div>
                 </div>

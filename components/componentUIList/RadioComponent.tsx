@@ -7,31 +7,31 @@ export const RadioComponent = () => {
             <div>Select Your Gender?</div>
             <div className="flex items-center gap-3">
                 <RadioGroupItem
-                    value="default"
-                    id="r1"
+                    value="Male"
+                    id="male"
                     className="cursor-pointer"
                 />
-                <Label htmlFor="r1" className="cursor-pointer">
+                <Label htmlFor="male" className="cursor-pointer">
                     Male
                 </Label>
             </div>
             <div className="flex items-center gap-3">
                 <RadioGroupItem
-                    value="comfortable"
-                    id="r2"
+                    value="female"
+                    id="female"
                     className="cursor-pointer"
                 />
-                <Label htmlFor="r2" className="cursor-pointer">
+                <Label htmlFor="female" className="cursor-pointer">
                     Female
                 </Label>
             </div>
             <div className="flex items-center gap-3">
                 <RadioGroupItem
-                    value="compact"
-                    id="r3"
+                    value="other"
+                    id="other"
                     className="cursor-pointer"
                 />
-                <Label htmlFor="r3" className="cursor-pointer">
+                <Label htmlFor="other" className="cursor-pointer">
                     Other
                 </Label>
             </div>

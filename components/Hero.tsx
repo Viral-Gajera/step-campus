@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function () {
@@ -33,7 +34,7 @@ export default function () {
                 <div className="mt-3 text-gray-700 text-3xl font-bold font-mono">
                     Welcome To{" "}
                     <h1 className="text-black inline-block italic underline bg-[var(--color-primary-400)] p-4 skew-x-12 z-0">
-                        Step Campus!!
+                        <Link href={"about"} >Step Campus!</Link>
                     </h1>
                 </div>
                 <div className="h-[50px]" ></div>
