@@ -29,21 +29,32 @@ export function DragAndDrop() {
         const data = pendinglist[id];
 
         const pList = pendinglist.filter((ele) => ele !== data);
-        console.log(pList);
         setPendinglist(pList);
         setDroppedList([...droppedList, data]);
+    };
+
+    const onDropEvent2 = (e: any) => {
+        e.preventDefault();
+        const id = e.dataTransfer.getData("id");
+        const data = droppedList[id];
+        const pList = droppedList.filter((ele: any) => ele !== data);
+        setDroppedList(pList);
+        setPendinglist((prev) => [...prev, data]);
     };
     return (
         <>
             <div className="flex">
                 <div className="w-1/2">
                     <h3>Drag Items</h3>
-                    <div className="flex flex-wrap mt-2">
+                    <div
+                        className="flex flex-wrap mt-2 border-2 h-[110px] border-dashed"
+                        onDragOver={onDragOverEvent}
+                        onDrop={onDropEvent2}
+                    >
                         {pendinglist.map((ele, id) => {
                             return (
                                 <div
-                                    className="bg-[#f4ae12] m-2 p-2 w-[20%] rounded-lg"
-                                    onClick={() => console.log(id)}
+                                    className="bg-[#f4ae12] m-2 p-2 w-[20%] h-[40px] rounded-lg cursor-pointer"
                                     draggable={true}
                                     onDragStart={(e) => onDragEvent(e, id)}
                                     key={id}
@@ -57,17 +68,18 @@ export function DragAndDrop() {
                 <div className="w-1/2">
                     <h3>Drop Items</h3>
                     <div
-                        className="mt-2 flex flex-wrap border-2 border-dashed h-[110px]"
+                        className="mt-2 flex flex-wrap border-2 border-dashed h-[110px] border-l-0 bg-[#fff7e8]"
                         onDragOver={onDragOverEvent}
                         onDrop={onDropEvent}
-                       
                     >
                         {droppedList &&
                             droppedList.map((ele: any, id: any) => {
                                 return (
                                     <div
-                                        className="bg-[#f4ae12] m-2 p-2 w-[20%] h-[40px] rounded-lg"
+                                        className="bg-[#f4ae12] m-2 p-2 w-[20%] h-[40px] rounded-lg cursor-pointer"
                                         key={id}
+                                        draggable={true}
+                                        onDragStart={(e) => onDragEvent(e, id)}
                                     >
                                         {ele}
                                     </div>

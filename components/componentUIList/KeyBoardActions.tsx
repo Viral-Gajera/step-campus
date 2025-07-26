@@ -17,7 +17,7 @@ export function KeyBoardActions() {
                 ></input>
             </div>
             <div className="w-1/2 bg-neutral-900 text-white p-2 rounded">
-                Clicked {keyPressed} on keyboard
+                Clicked <span className="font-bold text-[#f4ae12]">{keyPressed}</span> on keyboard
             </div>
         </div>
     );

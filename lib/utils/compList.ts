@@ -1,5 +1,4 @@
 import { CheckboxComponent } from "@/components/componentUIList/CheckBoxComponent";
-import { ButtonComponent } from "../../components/componentUIList/Button";
 import { DropdownComponent } from "../../components/componentUIList/DropdownListComponent";
 import {
     RadioComponent,
@@ -26,6 +25,11 @@ import { FileRename } from "@/components/componentUIList/FileRename";
 import { ToggleButton } from "@/components/componentUIList/ToggleButton";
 import { KeyBoardActions } from "@/components/componentUIList/KeyBoardActions";
 import { SearchButton } from "@/components/componentUIList/SearchButton";
+import { LoginForm } from "@/components/componentUIList/LoginForm";
+import { MouseOver } from "@/components/componentUIList/MouseOver";
+import { List } from "@/components/componentUIList/List";
+import { ValidateCss } from "@/components/componentUIList/ValidateCss";
+import { AnotherComponent } from "@/components/componentUIList/AnotherComponent";
 
 let componentList: any = [
     {
@@ -115,9 +119,9 @@ let componentList: any = [
     },
     {
         title: "Login",
-        component: RadioComponent,
+        component: LoginForm,
         description:
-            "A login form is a user interface element, typically found on websites and applications, that allows registered users to access a protected system by verifying their identity. It usually requires users to input their username (or email) and password, and sometimes other authentication factors, to confirm they are who they claim to be. ",
+            "A login form is a user interface element, typically found on websites and applications, that allows registered users to access a protected system by verifying their identity. It usually requires users to input their username (or email) and password, and sometimes other authentication factors, to confirm they are who they claim to be. viral.gajera218@gmail.com",
     },
     {
         title: "Sign Up",
@@ -125,7 +129,7 @@ let componentList: any = [
     },
     {
         title: "Mouse Over",
-        component: RadioComponent,
+        component: MouseOver,
     },
     {
         title: "Keyboard Actions",
@@ -133,7 +137,7 @@ let componentList: any = [
     },
     {
         title: "List",
-        component: RadioComponent,
+        component: List,
     },
     {
         title: "File Upload",
@@ -157,7 +161,7 @@ let componentList: any = [
     },
     {
         title: "Validate Css Property",
-        component: RadioComponent,
+        component: ValidateCss,
     },
     {
         title: "Wait",
@@ -177,7 +181,7 @@ let componentList: any = [
     },
     {
         title: "Another Component",
-        component: RadioComponent,
+        component: AnotherComponent,
     },
 ];
 
