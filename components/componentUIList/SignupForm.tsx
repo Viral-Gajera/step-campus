@@ -17,13 +17,14 @@ import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react";
 import Link from "next/link";
 import useRandom from "@/hooks/useRandom";
 
-export function LoginForm({
+export function SignupForm({
     className,
     ...props
 }: React.ComponentProps<"div">) {
     const EMAIL = `stepcampus@gmail.com`;
     const PASSWORD = `stepcampus123`;
 
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isSuccess, setIsSuccess] = useState("");
@@ -33,31 +34,27 @@ export function LoginForm({
     const [num1] = useState(useRandom(50, 100, true));
     const [num2] = useState(useRandom(0, 50, false));
     const [op] = useState((num1 + num2) % 2 === 0 ? "+" : "-");
-    const [result] = useState(op==="+"?num1+num2:num1-num2);
+    const [result] = useState(op === "+" ? num1 + num2 : num1 - num2);
 
     function loginHandler(e: any) {
-        if (!email || !password || !captchaInput) {
+        if (!name || !email || !password || !captchaInput) {
             return;
         }
 
         e.preventDefault();
 
-        if(Number(captchaInput) != result){
+        if (Number(captchaInput) != result) {
             setIsSuccess("FALSE");
             setMessage("Invalid Captcha");
             return;
         }
 
-        if (email.toLowerCase() === EMAIL && password === PASSWORD) {
-            setIsSuccess("TRUE");
-            setMessage("Success! Login Successful");
-            setEmail("");
-            setPassword("");
-            setCaptchaInput("");
-        } else {
-            setIsSuccess("FALSE");
-            setMessage("Failed! Invalid Credential");
-        }
+        setIsSuccess("TRUE");
+        setMessage("Success! Sign up Successful");
+        setName("");
+        setEmail("");
+        setPassword("");
+        setCaptchaInput("");
     }
 
     return (
@@ -86,30 +83,25 @@ export function LoginForm({
             )}
             <Card>
                 <CardHeader>
-                    <CardTitle className="mb-2 text-xl">
-                        Login to your account
-                    </CardTitle>
+                    <CardTitle className="mb-2 text-xl">Sign Up</CardTitle>
                     <CardDescription>
-                        <div className="mb-1">
-                            Use below credential to execute Login:
-                        </div>
-                        <div>
-                            Email:{" "}
-                            <span className="font-semibold text-black">
-                                {EMAIL}
-                            </span>
-                        </div>
-                        <div>
-                            Password:{" "}
-                            <span className="font-semibold text-black">
-                                {PASSWORD}
-                            </span>
-                        </div>
+                        Fill up the details to create your account
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form>
                         <div className="flex flex-col gap-6">
+                            <div className="grid gap-3">
+                                <Label htmlFor="email">Name</Label>
+                                <Input
+                                    id="name"
+                                    type="text"
+                                    placeholder="John Doe"
+                                    required
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
                             <div className="grid gap-3">
                                 <Label htmlFor="email">Email</Label>
                                 <Input
@@ -136,11 +128,11 @@ export function LoginForm({
                             </div>
                             <div className="grid gap-3">
                                 <Label htmlFor="password">Solve Captcha</Label>
-                                <div className="flex items-center gap-5" >
-                                    <div className="text-xl" >{num1}</div>
-                                    <div className="text-xl" >{op}</div>
-                                    <div className="text-xl" >{num2}</div>
-                                    <div className="text-xl" >=</div>
+                                <div className="flex items-center gap-5">
+                                    <div className="text-xl">{num1}</div>
+                                    <div className="text-xl">{op}</div>
+                                    <div className="text-xl">{num2}</div>
+                                    <div className="text-xl">=</div>
                                     <div>
                                         <Input
                                             id="captcha-input"
@@ -162,17 +154,17 @@ export function LoginForm({
                                     className="w-full"
                                     onClick={loginHandler}
                                 >
-                                    Login
+                                    Sign Up
                                 </Button>
                             </div>
                         </div>
                         <div className="mt-4 text-center text-sm">
-                            Don&apos;t have an account?{" "}
+                            Already have an account?{" "}
                             <Link
-                                href="sign-up"
+                                href="login"
                                 className="underline underline-offset-4"
                             >
-                                Sign up
+                                Login
                             </Link>
                         </div>
                     </form>

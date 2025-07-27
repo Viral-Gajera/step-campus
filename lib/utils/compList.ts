@@ -30,6 +30,7 @@ import { MouseOver } from "@/components/componentUIList/MouseOver";
 import { List } from "@/components/componentUIList/List";
 import { ValidateCss } from "@/components/componentUIList/ValidateCss";
 import { AnotherComponent } from "@/components/componentUIList/AnotherComponent";
+import { SignupForm } from "@/components/componentUIList/SignupForm";
 
 let componentList: any = [
     {
@@ -125,7 +126,9 @@ let componentList: any = [
     },
     {
         title: "Sign Up",
-        component: RadioComponent,
+        component: SignupForm,
+        description:
+            "A signup form is a webpage where users input information to gain access to a website's services or content. Typically, these forms require users to provide personal details like their name, email address, username, and password."
     },
     {
         title: "Mouse Over",
