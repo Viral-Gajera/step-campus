@@ -9,7 +9,7 @@ export const RadioComponent = () => {
                 <RadioGroupItem
                     value="Male"
                     id="male"
-                    className="cursor-pointer"
+                    className="cursor-pointer border-1 border-gray-400"
                 />
                 <Label htmlFor="male" className="cursor-pointer">
                     Male
@@ -19,7 +19,7 @@ export const RadioComponent = () => {
                 <RadioGroupItem
                     value="female"
                     id="female"
-                    className="cursor-pointer"
+                    className="cursor-pointer border-1 border-gray-400"
                 />
                 <Label htmlFor="female" className="cursor-pointer">
                     Female
@@ -29,7 +29,7 @@ export const RadioComponent = () => {
                 <RadioGroupItem
                     value="other"
                     id="other"
-                    className="cursor-pointer"
+                    className="cursor-pointer border-1 border-gray-400"
                 />
                 <Label htmlFor="other" className="cursor-pointer">
                     Other

@@ -2,9 +2,10 @@
 
 export function NestedFrame() {
     // Use a fallback for origin during prerendering
-  const origin = typeof window !== "undefined" ? window.location.origin : "";
+    const origin = typeof window !== "undefined" ? window.location.origin : "";
     return (
         <iframe
+            id="iframe1"
             src={origin + "/frame"}
             height="400"
             width="100%"

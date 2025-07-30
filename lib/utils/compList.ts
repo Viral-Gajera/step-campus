@@ -37,102 +37,177 @@ let componentList: any = [
         title: "Radio Button",
         component: RadioComponent,
         code: RadioCode,
-        description:
-            "A radio button is a type of web element that allows users to select only one option from a group of choices.",
+        description: {
+            content: "A radio button is a type of web element that allows users to select only one option from a group of choices.",
+            customClass: "font-bold",
+            pattern: "only one option",
+            token: "only one option",
+        }
+           
     },
     {
         title: "Dropdown",
         component: DropdownComponent,
-        description:
-            "A dropdown is a UI element that allows users to select one (or sometimes multiple) options from a list. In HTML, dropdowns are typically implemented using the <select> tag with nested <option> tags.",
+        description: {
+            content: "A dropdown is a UI element that allows users to select one or sometimes multiple options from a list. In HTML, dropdowns are typically implemented using the <select> tag with nested <option> tags.",
+            pattern: "select one or sometimes multiple",
+            token: "select one or sometimes multiple",
+            customClass: "font-bold",
+        }
+           
     },
     {
         title: "Suggestive Dropdown",
         component: Combobox,
-        description:
-            "An auto-suggestive dropdown (also known as an autocomplete dropdown) is a UI element where suggestions appear dynamically as the user types into an input field. These are not standard <select> elements, so Selenium handles them differently—usually by interacting with the input field and then selecting from the dynamically generated list.",
+        description: {
+            content: "An auto-suggestive dropdown (also known as an autocomplete dropdown) is a UI element where suggestions appear dynamically as the user types into an input field. These are not standard <select> elements, so Selenium handles them differently—usually by interacting with the input field and then selecting from the dynamically generated list.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+          
     },
     {
         title: "Checkboxes",
         component: CheckboxDemo,
-        description:
-            "A checkbox is a web element that allows users to select one or more options from a set. It is represented in HTML using the <input type='checkbox'> tag.",
+        description: {
+            content: "A checkbox is a web element that allows users to select one or more options from a set. It is represented in HTML using the <input type='checkbox'> tag.",
+            pattern: "one or more options",
+            token: "one or more options",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Switch Tab",
         component: SwitchTab,
-        description:
-            "The action of changing focus from one browser tab to another using Selenium or browser controls.",
+        description: {
+            content:  "The action of changing focus from one browser tab to another.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+           
     },
     {
         title: "Switch Window",
         component: SwitchWindow,
-        description:
-            "Switch Window in Selenium refers to the process of changing the driver's focus from one browser window to another when multiple windows are open.",
+        description: {
+            content:  "Switch Window in Selenium refers to the process of changing the driver's focus from one browser window to another when multiple windows are open.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+           
     },
     {
         title: "Alert",
         component: Alert,
-        description:
-            "An alert is a pop-up message box that appears in the browser to give information to the user. It is created using JavaScript and is commonly used for warnings, confirmations, or simple notifications.",
+        description: {
+            content: "An alert is a pop-up message box that appears in the browser to give information to the user. It is created using JavaScript and is commonly used for warnings, confirmations, or simple notifications.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Confirm",
         component: Confirm,
-        description:
-            "A confirm() dialog in JavaScript is used to ask the user to confirm or cancel an action. It displays a message with 'OK' and 'Cancel' buttons and returns a Boolean value.",
+        description: {
+            content: "A confirm() dialog in JavaScript is used to ask the user to confirm or cancel an action. It displays a message with 'OK' and 'Cancel' buttons and returns a Boolean value.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Hide And Show Element",
         component: HideAndShow,
-        description:
-            "This web element tells us whether the element is visible or not.",
+        description: {
+            content: "This web element tells us whether the element is visible or not.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Web table",
         component: TableDemo,
-        description:
-            "tables allow web developers to arrange data into rows and columns.",
+        description: {
+            content: "In Selenium ,web tables are handled using standard XPath or CSS selectors. A web table in HTML is structured using <table>,<tr>(table rows), and <td> or <th> (table data or headers)",
+            pattern: "CSS|XPath|web tables|selectors",
+            customClass: "font-bold",
+            token:["CSS","XPath","web tables","selectors"]
+        }
+            
     },
     {
         title: "Frame",
         component: Iframe,
-        description:
-            "An inline frame (iframe) HTML element is used to embed another document within the current HTML document.",
+        description: {
+            content:"An inline frame (iframe) HTML element is used to embed another document within the current HTML document.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Nested Frame",
         component: NestedFrame,
-        description:
-            "An inline frame (iframe) HTML element is used to embed another document within the current HTML document.",
+        description: {
+            content: "A nested frame means a frame (or iframe) inside another frame. To interact with elements inside such frames using Selenium Java, you must switch to each frame step by step.",
+            pattern: "nested frame|inside another frame|Selenium Java|switch",
+            token: ["nested frame","inside another frame","Selenium Java","switch"],
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Horizontal Scroll",
         component: HorizontalScroll,
-        description:
-            "Horizontal scrolling refers to the ability to navigate content left and right on a screen, typically when the content is wider than the display area.",
+        description: {
+            content: "Horizontal scrolling refers to the ability to navigate content left and right on a screen, typically when the content is wider than the display area.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Vertical Scroll",
         component: VerticalScroll,
-        description:
-            "A vertical scroll bar is a graphical control element that allows users to navigate a document, webpage, or other content that is too large to fit within the currently visible area, specifically by moving the content up and down.",
+        description: {
+            content: "A vertical scroll bar is a graphical control element that allows users to navigate a document, webpage, or other content that is too large to fit within the currently visible area, specifically by moving the content up and down.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Login",
         component: LoginForm,
-        description:
-            "A login form is a user interface element, typically found on websites and applications, that allows registered users to access a protected system by verifying their identity. It usually requires users to input their username (or email) and password, and sometimes other authentication factors, to confirm they are who they claim to be. viral.gajera218@gmail.com",
+        description: {
+            content: "A login form is a user interface element, typically found on websites and applications, that allows registered users to access a protected system by verifying their identity. It usually requires users to input their username (or email) and password, and sometimes other authentication factors, to confirm they are who they claim to be.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+            
     },
     {
         title: "Sign Up",
         component: SignupForm,
-        description:
-            "A signup form is a webpage where users input information to gain access to a website's services or content. Typically, these forms require users to provide personal details like their name, email address, username, and password."
+        description: {
+            content:  "A signup form is a webpage where users input information to gain access to a website's services or content. Typically, these forms require users to provide personal details like their name, email address, username, and password.",
+            pattern: "",
+            customClass: "font-bold",
+        }
+           
     },
     {
         title: "Mouse Over",
         component: MouseOver,
+        description: {
+            content:  "Mouse Over in Selenium refers to simulating in user's action of hovering the mouse cursor over a web element (like a menu, tooltip, or dropdown) using the Actions class.",
+            pattern: "Mouse Over in Selenium",
+            token: "Mouse Over in Selenium",
+            customClass: "font-bold",
+        }
     },
     {
         title: "Keyboard Actions",

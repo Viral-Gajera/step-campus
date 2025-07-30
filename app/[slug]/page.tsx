@@ -2,6 +2,7 @@ import BackButton from "@/components/BackButton";
 import componentList from "@/lib/utils/compList";
 import CodeDisplay from "@/components/CodeDisplay";
 import Image from "next/image";
+import { StyleGivenText } from "@/components/StyleGivenText";
 
 // Define generateStaticParams to provide all possible slug values
 export async function generateStaticParams() {
@@ -31,7 +32,12 @@ export default async function Page({
                 </div>
                 <div className="mb-8">
                     <h2 className=" font-bold mb-1">Definition:</h2>
-                    <div>{component?.description}</div>
+                    <StyleGivenText
+                        customClassName={component?.description?.customClass}
+                        pattern={component?.description.pattern}
+                        description={component?.description?.content}
+                        token={component?.description?.token}
+                    />
                 </div>
                 <div className="mb-8">
                     <h2 className=" font-bold mb-2">
@@ -59,17 +65,16 @@ export default async function Page({
                             height={30}
                             className="inline-block pb-1"
                         ></Image>{" "}
-                        Youtube:
+                        YouTube:
                     </h2>
                     <div>
-                        <span className="font-bold" >Stuck?</span>
+                        <span className="font-bold">Stuck?</span>
                         <a
                             href="https://youbute.com"
                             target="_blank"
                             className="hover:font-bold p-2 cursor-pointer underline underline-offset-2 italic"
                         >
-                            Watch the Step-by-Step
-                            Tutorial on YouTube
+                            Watch the Step-by-Step Tutorial on YouTube
                         </a>
                     </div>
                 </div>

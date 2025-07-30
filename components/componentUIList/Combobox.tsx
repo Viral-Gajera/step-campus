@@ -820,7 +820,7 @@ export function Combobox() {
                     id="countries"
                     type="text"
                     className="block border border-neutral-500 rounded p-2 w-[300px]"
-                    placeholder="Select a fruit"
+                    placeholder="Select a Country"
                     value={inputValue}
                     onChange={(e) => {
                         setIsOpen(true);
