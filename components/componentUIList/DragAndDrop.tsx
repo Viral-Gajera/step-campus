@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export function DragAndDrop() {
+    const [message, setMessage] = useState("");
     const [pendinglist, setPendinglist] = useState([
         "Item 1",
         "Item 2",
@@ -31,6 +32,7 @@ export function DragAndDrop() {
         const pList = pendinglist.filter((ele) => ele !== data);
         setPendinglist(pList);
         setDroppedList([...droppedList, data]);
+        setMessage("Item Dropped");
     };
 
     const onDropEvent2 = (e: any) => {
@@ -40,10 +42,11 @@ export function DragAndDrop() {
         const pList = droppedList.filter((ele: any) => ele !== data);
         setDroppedList(pList);
         setPendinglist((prev) => [...prev, data]);
+        setMessage("Item Removed");
     };
     return (
         <>
-            <div className="flex">
+            <div className="flex mb-4">
                 <div className="w-1/2">
                     <h3>Drag Items</h3>
                     <div
@@ -65,10 +68,11 @@ export function DragAndDrop() {
                         })}
                     </div>
                 </div>
+
                 <div className="w-1/2">
                     <h3>Drop Items</h3>
                     <div
-                        className="mt-2 flex flex-wrap border-2 border-dashed h-[110px] border-l-0 bg-[#fff7e8]"
+                        className="mt-2 flex flex-wrap border-2 border-dashed h-[110px] border-l-0 bg-[#e5cc9b]"
                         onDragOver={onDragOverEvent}
                         onDrop={onDropEvent}
                     >
@@ -87,6 +91,9 @@ export function DragAndDrop() {
                             })}
                     </div>
                 </div>
+            </div>
+            <div>
+                <span className="font-bold">Action :</span> {message}
             </div>
         </>
     );

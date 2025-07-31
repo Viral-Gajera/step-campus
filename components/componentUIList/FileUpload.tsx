@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { toast, Toaster } from "sonner";
 
-export function FileUpload({ isMultiple = true }) {
+export function FileUpload({ isMultiple = true , isRename = false }) {
     const [openModal, setOpenModal] = useState(false);
     const [selectedFile, setSelectedFile] = useState<any>([]);
     const [selectedClickedFile, setSelectedClickedFile] = useState<File>();
@@ -70,7 +70,7 @@ export function FileUpload({ isMultiple = true }) {
                         );
                     })}
             </div>
-            {openModal && (
+            {openModal && isRename &&(
                 <Modal
                     open={openModal}
                     closeModal={closeModal}

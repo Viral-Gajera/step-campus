@@ -17,9 +17,14 @@ export function DatePicker() {
     return (
         <>
             <div className="flex justify-between items-center">
-                <div className="relative w-1/3">
-                    <div className="flex gap-4">
+                <div className="relative">
+                    <div className="flex gap-4 items-center">
                         <h3>Date Picker:</h3>
+                        <input
+                            type="text"
+                            value={date?.toDateString()}
+                            className="bg-neutral-900 w-[50%] text-white p-2 rounded"
+                        />
                         <div
                             className="cursor-pointer"
                             onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +37,7 @@ export function DatePicker() {
                             />
                         </div>
                         {isOpen && (
-                            <div className="absolute top-[20px] left-[140px]">
+                            <div className="absolute top-[20px] left-[380px] ">
                                 <Calendar
                                     mode="single"
                                     selected={date}
@@ -44,13 +49,7 @@ export function DatePicker() {
                         )}
                     </div>
                 </div>
-                <div className="w-2/3">
-                    <h3>Selected Date:</h3>
-                    <div className="bg-neutral-900 w-[50%] text-white p-2 rounded">
-                        {date?.toDateString()}
-                    </div>
-                </div>
             </div>
         </>
     );
-};
+}

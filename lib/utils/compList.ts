@@ -212,38 +212,92 @@ let componentList: any = [
     {
         title: "Keyboard Actions",
         component: KeyBoardActions,
+        description: {
+            content:  "In Selenium Java, keyboard actions are performed using the Actions class or sendKeys() METHODS. These are used for things like pressing endOfYesterday, Tab, Ctrl+C, typing uppercase letters, etc.",
+            pattern: "Selenium Java|Actions|sendKeys",
+            token: ["Selenium Java", "Actions" , "sendKeys"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "List",
         component: List,
+        description: {
+            content:  "In Selenium working with a list of elements means handling multiple web elements on the page that match a locator - like multiple links, rows in a table, checkboxes, etc.",
+            pattern: "list of elements|multiple web elements",
+            token: ["multiple web elements", "list of elements"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "File Upload",
         component: FileUpload,
+        description: {
+            content:  "File upload in Selenium refers to the process of automating the action of selecting and submitting a file to a web page using Selenium WebDriver.",
+            pattern: "File upload in Selenium",
+            token: ["File upload in Selenium"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "File Download",
         component: FileDownload,
+        description: {
+            content:  "File download in Selenium refers to the automation of downloading files from a web application by configuring the browser to save files to a specific location without prompting the user for confirmation.",
+            pattern: "File download in Selenium",
+            token: ["File download in Selenium"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Date Picker",
         component: DatePicker,
+        description: {
+            content:  "Date picker in Selenium refers to automating the selection of a date from a calendar interface on a web page using Selenium WebDriver.",
+            pattern: "Date picker in Selenium",
+            token: ["Date picker in Selenium"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Full Page Scroll",
         component: VerticalScroll,
+        description: {
+            content:  "Full page scroll in Selenium means programmatically scrolling from the top to the bottom of a webpage - useful when testing lazy-loading content, infinite scroll, or ensuring elements below the fold are loaded.",
+            pattern: "Full page scroll in Selenium",
+            token: ["Full page scroll in Selenium"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Drag and Drop",
         component: DragAndDrop,
+        description: {
+            content:  "Drag and Drop in Selenium is the automation of clicking and holding a draggable element, moving it to a target location, and then releasing it -- using the Actions class.",
+            pattern: "Drag and Drop in Selenium|Actions",
+            token: ["Drag and Drop in Selenium" , "Actions"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Validate Css Property",
         component: ValidateCss,
+        description: {
+            content:  "CSS Property in Selenium refers to accessing or validating the Cascading Style Sheet (CSS) values (like color, font-size, background-color, etc.) of a web element usingSelenium WebDrivers.",
+            pattern: "CSS Property in Selenium|Cascading Style Sheet",
+            token: ["CSS Property in Selenium" , "Cascading Style Sheet"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Wait",
         component: Wait,
+        description: {
+            content:  "Waiting for a text to appear in Selenium means instructing the automation script to pause execution until specific text is present or visible within a web element on the page.",
+            pattern: "Waiting for a text to appear in Selenium",
+            token: ["Waiting for a text to appear in Selenium"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "File Rename",
@@ -252,14 +306,32 @@ let componentList: any = [
     {
         title: "Toggle button",
         component: ToggleButton,
+        description: {
+            content:  "A Toggle Button is a UI element that switches between two states -- like ON/OFF, ENABLED/DISABLED -- when clicked.",
+            pattern: "Toggle Button",
+            token: ["Toggle Button"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Search Button",
         component: SearchButton,
+        description: {
+            content:  "Searching elements in Selenium means the process of identifying and locating web elements.",
+            pattern: "Searching elements in Selenium",
+            token: ["Searching elements in Selenium"],
+            customClass: "font-bold",
+        }
     },
     {
-        title: "Another Component",
+        title: "Mouse Actions",
         component: AnotherComponent,
+        description: {
+            content:  "Mouse Actions in Selenium simulate user interactions with the mouse, such as hovering, clicking, double-clicking, right-clicking (context click), dragging and dropping, and more, to automate user behaviors on web elements.",
+            pattern: "Mouse Actions in Selenium",
+            token: ["Mouse Actions in Selenium"],
+            customClass: "font-bold",
+        }
     },
 ];
 

@@ -21,6 +21,8 @@ export default async function Page({
         return item.url === slug;
     });
 
+    if(!component) return;
+
     return (
         <section className="custom-border border-b">
             <div className="container mx-auto border-l custom-border border-r p-16">

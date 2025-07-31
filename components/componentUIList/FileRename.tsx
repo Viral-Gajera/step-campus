@@ -6,7 +6,7 @@ import { FileUpload } from "./FileUpload";
 export function FileRename() {
     
     return (
-        <FileUpload isMultiple={false}/>
+        <FileUpload isMultiple={false} isRename={true}/>
     );
 }
 

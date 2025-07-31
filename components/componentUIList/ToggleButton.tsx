@@ -5,7 +5,7 @@ import { useState } from "react";
 export function ToggleButton() {
     const [message, setMessage] = useState("ON");
     const handleToggle = (value: any) => {
-        const messageValue = value ? "ON" : "OFF";
+        const messageValue = value ? "OFF" : "ON";
         setMessage(messageValue);
     };
     return (
