@@ -7,7 +7,7 @@ export default function () {
             <div className="container mx-auto custom-border border-l border-r p-16">
                 <h1 className="my-5" >Selenium Practice Components!,</h1>
                 {/* custom-border border border-r-0 border-b-0 */}
-                <div className="grid grid-cols-5 px-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-3">
                     {componentList.map((data: any, index: number) => {
                         return (
                             <div
