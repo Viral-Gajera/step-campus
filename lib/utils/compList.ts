@@ -302,6 +302,12 @@ let componentList: any = [
     {
         title: "File Rename",
         component: FileRename,
+        description: {
+            content:  "File renaming in Selenium involves simulating the actions required to change the name of a file, typically after a download, using file system operations via programming language capabilities (e.g., Java's File class) rather than direct Selenium WebDriver commands.",
+            pattern: "File renaming in Selenium|File class",
+            token: ["File renaming in Selenium" , "File class"],
+            customClass: "font-bold",
+        }
     },
     {
         title: "Toggle button",
