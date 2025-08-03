@@ -1,4 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Step Campus
+
+Step Campus is a platform designed to help you master web automation with hands-on practice. It provides a rich set of UI components specifically created for testing and perfecting your Selenium scripts.
+
+**Key Features:**
+
+- Hands-on practice with real UI components
+- Rich set of diverse UI elements for comprehensive testing
+- Ideal for testing and perfecting your Selenium scripts
+
+## Tech Stack
+
+This project is built using the following technologies:
+
+**Dependencies:**
+- Next.js
+- React
+- @radix-ui/react (various components)
+- class-variance-authority
+- clsx
+- cmdk
+- date-fns
+- lucide-react
+- next-themes
+- react-day-picker
+- react-syntax-highlighter
+- sonner
+- tailwind-merge
+
+**Dev Dependencies:**
+- @tailwindcss/postcss
+- @types/node
+- @types/react
+- @types/react-dom
+- tailwindcss
+- tw-animate-css
+- typescript
+
+## Demo
+
+![Image 1](tmp/images/1.png)
+![Image 2](tmp/images/2.png)
+![Image 3](tmp/images/3.png)
+![Image 4](tmp/images/4.png)
+![Image 5](tmp/images/5.png)
+![Image 6](tmp/images/6.png)
+
 
 ## Getting Started
 
